@@ -15,6 +15,10 @@ export default function CardPanel() {
                 newMap.set(action.venueName, action.rating ?? 0)
                 return newMap
             }
+            case "remove":{
+            newMap.delete(action.venueName)
+            return newMap
+        }
             default:
                 return ratingMap
         }
